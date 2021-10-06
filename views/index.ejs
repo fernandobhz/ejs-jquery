@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/inputmask/dist/jquery.inputmask.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    Product price: <input type="text" id="productPrice"></input>;
+
+    <script>
+      $("#productPrice").inputmask("decimal", {
+      alias: "numeric",
+      groupSeparator: ",",
+      autoGroup: true,
+      digits: 2,
+      radixPoint: ".",
+      digitsOptional: false,
+      allowMinus: false,
+      prefix: "R$ ",
+      placeholder: "",
+    });
+    </script>
+  </body>
+</html>
